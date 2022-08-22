@@ -18,6 +18,5 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: "{{defaultContext}}:app"
           tags: arhangel662/devops-for-programmers-project-74:latest
           push: true
