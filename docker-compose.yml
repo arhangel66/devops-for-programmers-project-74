@@ -1,9 +1,29 @@
 version: "3"
 
+volumes:
+  local_postgres_data2:
+
+
 services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_NAME: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - local_postgres_data2:/var/lib/postgresql/data
+
   app:
     image: arhangel662/devops-for-programmers-project-74
     build:
       context: .
       dockerfile: Dockerfile.production
     command: npm test
+    depends_on:
+      - db
