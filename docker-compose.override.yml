@@ -10,7 +10,6 @@ services:
       - "./app:/app/"
     command: bash -c 'sleep 3 && npm start'
 
-
   caddy:
     image: caddy:latest
     restart: unless-stopped
