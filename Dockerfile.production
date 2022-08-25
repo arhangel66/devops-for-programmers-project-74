@@ -11,4 +11,4 @@ COPY app/. .
 
 EXPOSE 8080
 
-CMD echo 'sleep' && sleep 4 && echo 'starting' && npm start'
+CMD npm start
