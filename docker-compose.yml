@@ -27,7 +27,7 @@ services:
       dockerfile: Dockerfile.production
     command: npm test
     depends_on:
-      db
+      - db
 
     environment:
       DATABASE_NAME: postgres
