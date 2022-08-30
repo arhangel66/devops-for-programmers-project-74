@@ -16,8 +16,6 @@ services:
     ports:
       - "5432:5432"
 
-    healthcheck:
-      test: "exit 0"
 
     volumes:
       - local_postgres_data2:/var/lib/postgresql/data
@@ -29,8 +27,7 @@ services:
       dockerfile: Dockerfile.production
     command: npm test
     depends_on:
-      db:
-        condition: service_healthy
+      db
 
     environment:
       DATABASE_NAME: postgres
