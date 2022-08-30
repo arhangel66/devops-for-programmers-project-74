@@ -16,7 +16,6 @@ services:
     ports:
       - "5432:5432"
 
-
     volumes:
       - local_postgres_data2:/var/lib/postgresql/data
 
@@ -25,7 +24,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.production
-    command: npm test
+    command: bash -c 'echo "sleep" && sleep 3 && echo "starting" && npm test'
     depends_on:
       - db
 
