@@ -20,4 +20,4 @@ jobs:
         with:
           tags: arhangel662/devops-for-programmers-project-74:latest
           push: true
-          file: {context}/Dockerfile.production
+          file: ./Dockerfile.production
