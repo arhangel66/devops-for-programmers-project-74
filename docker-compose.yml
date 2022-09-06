@@ -15,7 +15,6 @@ services:
       - db
     env_file: app/.env
 
-
   db:
     image: postgres:latest
 
