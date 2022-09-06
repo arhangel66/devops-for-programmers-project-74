@@ -1,2 +1,3 @@
 FROM node:14.18.1
 WORKDIR /app
+COPY app/.env.example .env

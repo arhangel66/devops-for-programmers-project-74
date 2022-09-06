@@ -13,8 +13,6 @@ services:
     command: bash -c 'echo "sleep" && sleep 3 && echo "starting" && npm test'
     depends_on:
       - db
-    volumes:
-      - ./app/.env.example:/app/.env
     env_file: app/.env
 
 
