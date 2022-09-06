@@ -24,6 +24,4 @@ services:
 
     volumes:
       - local_postgres_data2:/var/lib/postgresql/data
-      - ./app/.env.example:/app/.env
-
     env_file: app/.env
