@@ -13,7 +13,6 @@ services:
     command: bash -c 'echo "sleep" && sleep 3 && echo "starting" && npm test'
     depends_on:
       - db
-    env_file: app/.env
 
 
   db:
@@ -24,4 +23,7 @@ services:
 
     volumes:
       - local_postgres_data2:/var/lib/postgresql/data
-    env_file: app/.env
+
+    environment:
+        POSTGRES_USER: ${DATABASE_USERNAME}
+        POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
