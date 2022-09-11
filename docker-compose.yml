@@ -25,6 +25,6 @@ services:
       - local_postgres_data2:/var/lib/postgresql/data
 
     environment:
-        POSTGRES_NAME: ${DATABASE_NAME:-name}
-        POSTGRES_USER: ${DATABASE_USERNAME:-username}
+        POSTGRES_NAME: ${DATABASE_NAME:-postgres}
+        POSTGRES_USER: ${DATABASE_USERNAME:-postgres}
         POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-password}
